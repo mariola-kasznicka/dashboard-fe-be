@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Library.Dto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fb2635d20c55ff4e30966ef7967160c2604a226")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+531db41034ad33c5b8fc3d80ef8389b5e27d3e32")]
 [assembly: System.Reflection.AssemblyProductAttribute("Library.Dto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Library.Dto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
