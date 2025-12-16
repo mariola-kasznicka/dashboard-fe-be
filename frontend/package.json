@@ -8,7 +8,9 @@
     "dev:server": "ts-node server/index.ts",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --check ."
   },
   "dependencies": {
     "@shadcn/ui": "latest",
