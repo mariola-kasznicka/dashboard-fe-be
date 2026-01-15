@@ -8,7 +8,7 @@
   --font-open-sans: "Open Sans", sans-serif;
 }
 
-@theme inline {
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-open-sans);
