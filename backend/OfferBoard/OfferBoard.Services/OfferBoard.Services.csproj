@@ -7,4 +7,9 @@
         <RootNamespace>OfferBoard.Services</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\OfferBoard.Dal\OfferBoard.Dal.csproj" />
+      <ProjectReference Include="..\OfferBoard.Dto\OfferBoard.Dto.csproj" />
+    </ItemGroup>
+
 </Project>

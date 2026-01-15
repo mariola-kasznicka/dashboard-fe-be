@@ -1,11 +1,15 @@
 using Microsoft.EntityFrameworkCore;
-using OfferBoard;
+using OfferBoard.Dal;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Connection string is read from configuration, which can be overridden by environment variables:
+// Set ConnectionStrings__DefaultConnection environment variable, or use User Secrets for local development
+// Example: ConnectionStrings__DefaultConnection="Host=localhost;Port=5432;Database=offerboard;Username=postgres;Password=your_password"
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("DefaultConnection")
+        builder.Configuration.GetConnectionString("DefaultConnection") 
+        ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found. Set ConnectionStrings__DefaultConnection environment variable.")
     ));
 
 builder.Services.AddControllers();
@@ -14,53 +18,3 @@ var app = builder.Build();
 
 app.MapControllers();
 app.Run();
-
-// using OfferBoard;
-//
-// var builder = WebApplication.CreateBuilder(args);
-//
-// // Add services to the container.
-// // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-// builder.Services.AddEndpointsApiExplorer();
-// builder.Services.AddSwaggerGen();
-//
-// var app = builder.Build();
-//
-// // Configure the HTTP request pipeline.
-// if (app.Environment.IsDevelopment())
-// {
-//     app.UseSwagger();
-//     app.UseSwaggerUI();
-// }
-//
-// app.UseHttpsRedirection();
-//
-// var summaries = new[]
-// {
-//     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-// };
-//
-// app.MapGet("/weatherforecast", () =>
-//     {
-//         var forecast = Enumerable.Range(1, 5).Select(index =>
-//                 new WeatherForecast
-//                 (
-//                     DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-//                     Random.Shared.Next(-20, 55),
-//                     summaries[Random.Shared.Next(summaries.Length)]
-//                 ))
-//             .ToArray();
-//         return forecast;
-//     })
-//     .WithName("GetWeatherForecast")
-//     .WithOpenApi();
-//
-// app.Run();
-//
-// namespace OfferBoard
-// {
-//     record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-//     {
-//         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-//     }
-// }

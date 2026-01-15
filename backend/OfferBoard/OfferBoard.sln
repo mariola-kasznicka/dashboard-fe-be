@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfferBoard", "OfferBoard\OfferBoard.csproj", "{7E02767C-5475-4569-9FF6-852DC65C12FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfferBoard.App", "OfferBoard.App\OfferBoard.App.csproj", "{7E02767C-5475-4569-9FF6-852DC65C12FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfferBoard.Dal", "OfferBoard.Dal\OfferBoard.Dal.csproj", "{63B33EEB-90C7-46EA-B101-9FAFFF9C9FD2}"
 EndProject
