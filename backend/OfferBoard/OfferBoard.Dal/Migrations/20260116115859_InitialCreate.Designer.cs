@@ -12,7 +12,7 @@ using OfferBoard.Dal;
 namespace OfferBoard.Dal.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260116103319_InitialCreate")]
+    [Migration("20260116115859_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

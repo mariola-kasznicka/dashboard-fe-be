@@ -10,15 +10,6 @@
         public DateTime? PublishDate { get; set; }
         public DateTime? ArchivedDate { get; set; }
         
-        // Foreign key properties
-        public int UserId { get; set; }
-        public int IndustryId { get; set; }
-        public int LocalizationId { get; set; }
-        public int ContractTypeId { get; set; }
-        public int WorkingModeId { get; set; }
-        public int WorkTypeId { get; set; }
-        public int ExperienceLevelId { get; set; }
-        
         // Navigation properties
         public User User { get; set; } = null!;
         public Industry Industry { get; set; } = null!;
